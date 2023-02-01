@@ -21,6 +21,21 @@ def different_types():
     tuple_example = ("Michael", "Jim", "Dwight")    # IMMUTABLE
     tuple_without_parens = "Michael", "Jim", "Dwight"   # still immutable
     
-
+def contact_list():
+    contacts = [
+        ('Michael', 52),
+        ('Dwight', 41),
+        ('Jim', 37),
+        ('Pam', 34)
+    ]
+    # get a string as input
+    name = input()
+    
+    # search for the name IN list of contacts
+    
+    for i in contacts:
+        if name in i:
+            print(f"{ str(i[0]) } is { str(i[1]) }")
+    # output age of the contact: "{Name} is {age}"    
     
     
