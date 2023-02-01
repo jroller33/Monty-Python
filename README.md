@@ -1,3 +1,3 @@
-# 🐍👀🔥
+# 
 
 ![Monty Python](./montypython.gif)
