@@ -32,10 +32,9 @@ def contact_list():
     name = input()
     
     # search for the name IN list of contacts
-    
     for i in contacts:
         if name in i:
-            print(f"{ str(i[0]) } is { str(i[1]) }")
-    # output age of the contact: "{Name} is {age}"    
-    
-    
+            print(f"{ str( i[0] ) } is { str( i[1] ) }")
+        else:
+            print("Not Found")
+            
