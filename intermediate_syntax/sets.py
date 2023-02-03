@@ -13,4 +13,13 @@ def add_remove():
     
     nums.add(-7)
     nums.remove(3)
+    
     print(nums)
+    print(len(nums))    # prints length of the set
+    
+# def combining_sets():
+    # union operator ` | ` combines to form a new one containing items in either
+    # intersection operator ` & ` gets items only in both
+    # difference operator ` - ` gets items in the first set but not in the second
+    # symmetric operator ` * ` gets items in either set but not both
+    
