@@ -59,4 +59,8 @@ def perimeter_area():
     a = side ** 2
     print(f"\nSquare's Perimeter: {p}\nSquare's Area: {a}\n")
     
-perimeter_area()
+def test1():
+    a, b, c, d, *e, f, g = range(20)
+    print(len(e))
+    
+test1()
