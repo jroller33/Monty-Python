@@ -38,3 +38,25 @@ def contact_list():
         else:
             print("Not Found")
             
+def tuple_unpacking():  # allows you to assign each item in a tuple to a variable
+    numbers = (1,2,3)
+    a, b, c = numbers
+    print(a)
+    print(b)
+    print(c)
+    
+    # can also be used for a, b = b, a
+    
+    e, f, *g, h = [1, 2, 3, 4, 5, 6] #     *g takes all values leftover 
+    print(e) # 1
+    print(f) # 2
+    print(g) # [3, 4, 5]
+    print(h) # 6
+    
+def perimeter_area():
+    side = int(input("Enter the side length of a square: "))
+    p = side * 4
+    a = side ** 2
+    print(f"\nSquare's Perimeter: {p}\nSquare's Area: {a}\n")
+    
+perimeter_area()
