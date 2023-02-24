@@ -19,7 +19,7 @@ def list_methods():
     fruits.remove("orange")
     print(fruits)
     
-    fruits.pop(2) # removes the item at the index
+    fruits.pop(2) # removes the item at the index, also returns the item at that index, so you can store it in a variable if needed
     print(fruits)
     
     # replace an item in the list by its index
