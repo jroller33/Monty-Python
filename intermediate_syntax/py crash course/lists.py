@@ -1,5 +1,8 @@
-# lists are mutable in python
+# tuples, lists and strings are sequences **
 
+#   ---  LISTS  ---
+
+# lists are mutable in python
 # ---  CRUD list methods:
 
 def list_methods():
@@ -27,3 +30,22 @@ def list_methods():
     print(fruits)
     
     
+#            TUPLES              
+    
+# tuples are immutable in python, can be any datatype
+# the position of the items in the tuple is important
+# normally the location of an item in a tuple is used to identify it
+tuple_example = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+def convert_seconds(seconds):
+    # 
+    hours = seconds // 3600
+    minutes = (seconds - hours * 3600) // 60
+    remaining_seconds = seconds - hours * 3600 - minutes * 60
+    return hours, minutes, remaining_seconds
+
+def check_datatype_convert_seconds():
+    result = convert_seconds(5000)
+    print(type(result)) # <class 'tuple'>
+    
+# tuple methods:
