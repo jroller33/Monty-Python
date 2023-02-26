@@ -51,3 +51,29 @@ def check_datatype_convert_seconds():
     print(type(result)) # <class 'tuple'>
     
 # tuple methods:
+
+# ITERATING OVER A LIST AND TUPLE
+
+def iterate_list():
+    # for each string in the list, get its length and add it to the total
+    # len() is used to get length of string and number of elements in the list
+    animals = ["Dog", "Cat", "Bird", "Fish", "Snake"]
+    x = 0
+    for animal in animals:
+        x += len(animal) # length of each string in the list
+        
+    # len(animals) is used to get the number of elements in the list
+    print(f"Total characters: {x}, Average length: {x / len(animals)}")
+    
+def enumerate_function():
+    winners = ["Ashley", "Dylan", "Reese"]
+    for index, person in enumerate(winners):
+        print(f"{index + 1} -- {person}")
+        
+def full_emails(people):
+    result = []
+    for email, name in people:
+        result.append(f"{name} <{email}>")
+    return result
+
+# print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com")]))
