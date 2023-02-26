@@ -1,4 +1,8 @@
 # tuples, lists and strings are sequences **
+# strings are sequences of characters and immutable
+# lists are sequences of any datatype and mutable
+# tuples are sequences of any datatype and immutable
+
 
 #   ---  LISTS  ---
 
@@ -31,10 +35,8 @@ def list_methods():
     
     
 #            TUPLES              
-    
-# tuples are immutable in python, can be any datatype
-# the position of the items in the tuple is important
-# normally the location of an item in a tuple is used to identify it
+#     Tuples are used when you need to ensure that an element is in a certain position and will not change. order of the elements in a tuple can't be changed, so the position of the element in a tuple can have meaning. When a function returns multiple values, what gets returned is a tuple, with the return values as elements in the tuple. The order of the returned values is important, and a tuple ensures that the order isn’t going to change. Storing the elements of a tuple in separate variables is called unpacking (it works similiar to object destructuring in JavaScript) This allows you to take multiple returned values from a function and store each value in its own variable.
+
 tuple_example = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
 def convert_seconds(seconds):
