@@ -66,6 +66,8 @@ def iterate_list():
     print(f"Total characters: {x}, Average length: {x / len(animals)}")
     
 def enumerate_function():
+    # enumerate() takes a list as a parameter and returns a tuple for each element in the list. The first value in the tuple is the index, and the second is the element from the list at that index.
+    
     winners = ["Ashley", "Dylan", "Reese"]
     for index, person in enumerate(winners):
         print(f"{index + 1} -- {person}")
@@ -77,3 +79,38 @@ def full_emails(people):
     return result
 
 # print(full_emails([("alex@example.com", "Alex Diego"), ("shay@example.com")]))
+
+# list comprehensions:
+
+def list_comprehensions():
+    multiples = []
+    for x in range(1, 11):
+        multiples.append(x*7)
+    print(multiples)
+    
+    # or you could do it this way:
+    multiples2 = [x*7 for x in range(1, 11)]
+    print(multiples2)
+    
+    # list comprehensions create new lists based on ranges or sequences
+    languages = ["HTML", "JavaScript", "Python", "Ruby"]
+    lengths = [len(language) for language in languages]
+    print("Lengths of strings in array: ", lengths)
+    
+    # list comps can use a conditional stmt to filter out values
+    divisible_by_3 = [x for x in range(0, 101) if x % 3 == 0]
+    print(divisible_by_3)
+    
+    # create a fn, takes 'n' as arg, returns a list of odd #s btw 1 and n inclusively
+def odd_nums(n):
+    return [ x for x in range(1, n + 1) if x % 2 != 0 ]
+    
+    # the odd_nums(n) function does the same thing as this long code:
+    # my_list = []
+    # for x in range(1,101):
+    # if x % 10 == 0:
+    #     my_list.append(x)
+    # print(my_list)
+
+
+
