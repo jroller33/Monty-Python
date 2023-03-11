@@ -149,5 +149,16 @@ def convert_linux_permissions():
 
     print(f"Linux file permissions: {result}")
 
+def group_list(group, users):
+    return group + ": " + ", ".join(users)
 
-convert_linux_permissions()
+# print(group_list("Marketing", ["Mike", "Karen", "Jake", "Tasha"])) # "Marketing: Mike, Karen, Jake, Tasha"
+
+def guest_list(guests):    
+    # unpacks each tuple
+	for guest in guests:
+		(name, age, job) = guest
+		print(f"{name} is {age} years old and works as {job}")
+
+# guest_list([('Ken', 30, "Chef"), ("Pat", 35, 'Lawyer'), ('Amanda', 25, "Engineer")])
+
