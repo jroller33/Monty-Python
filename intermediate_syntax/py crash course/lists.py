@@ -112,5 +112,42 @@ def odd_nums(n):
     #     my_list.append(x)
     # print(my_list)
 
+def replace_file_extensions():
+    # this uses a list comprehension to replace all ".hpp" extensions with ".h"
+    filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
+
+    newfilenames = [filename.replace(".hpp", ".h") if filename[-4:] == ".hpp" else filename for filename in filenames]
+
+    print(newfilenames)
+
+def pig_latin():
+    text = input("Enter a phrase: ")
+    words = text.split()
+    pig_latin = ""
+
+    for word in words:
+        word = word[1:] + word[0] + "ay "
+        pig_latin += word
+    
+    print(pig_latin)
 
 
+def convert_linux_permissions():
+    octal = input("Please enter an octal (Ex: 640): ")
+    
+    result = ""
+    value_letters = [(4,"r"),(2,"w"),(1,"x")]
+    # Iterate over each of the digits in octal
+    for digit in [int(n) for n in str(octal)]:
+        # Check for each of the permissions values
+        for value, letter in value_letters:
+            if digit >= value:
+                result += letter
+                digit -= value
+            else:
+                result += "-"
+
+    print(f"Linux file permissions: {result}")
+
+
+convert_linux_permissions()
