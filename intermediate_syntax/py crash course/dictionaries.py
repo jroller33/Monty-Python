@@ -42,3 +42,4 @@ def count_letters(text):
     return result
 
 # if you need to search for a specific element, use dictionaries and not lists
+
