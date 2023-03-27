@@ -27,3 +27,19 @@ def string_words(string):
 # print(string_words("Keep going")) # Should print 2
 # print(string_words("Have a nice day")) # Should print 4
 
+
+def alphabetize_lists(list1, list2):
+
+    list = list1 + list2
+    new_list = sorted(list)
+
+    return new_list 
+
+
+Aniyahs_list = ["Jacomo", "Emma", "Uli", "Nia", "Imani"]
+Imanis_list = ["Loik", "Gabriel", "Ahmed", "Soraya"]
+
+
+print(alphabetize_lists(Aniyahs_list, Imanis_list))
+# Should print: ['Ahmed', 'Emma', 'Gabriel', 'Imani', 'Jacomo', 'Loik', 'Nia', 'Soraya', 'Uli']
+
