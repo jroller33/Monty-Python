@@ -47,9 +47,15 @@ Imanis_list = ["Loik", "Gabriel", "Ahmed", "Soraya"]
 
 
 
-def squares(start, end):
-    return [n*n for n in range(start, end+1)] 
+def squares():
+    start = int(input("Enter first number: "))
+    end = int(input("Enter second number: "))
 
+
+    result = [n*n for n in range(start, end+1)] 
+    print(result)
+
+squares()
 
 # print(squares(2, 3)) # Should print [4, 9]
 # print(squares(1, 5)) # Should print [1, 4, 9, 16, 25]
@@ -74,5 +80,5 @@ def countries(countries_dict):
     #     }
 
 
-host_addresses = {"router": "192.168.1.1", "localhost": "127.0.0.1", "google": "8.8.8.8"}
-print(host_addresses.keys())
+# host_addresses = {"router": "192.168.1.1", "localhost": "127.0.0.1", "google": "8.8.8.8"}
+# print(host_addresses.keys())
