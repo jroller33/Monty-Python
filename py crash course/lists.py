@@ -1,3 +1,6 @@
+# Python List Notes
+
+
 # tuples, lists and strings are sequences **
 # strings are sequences of characters and immutable
 # lists are sequences of any datatype and mutable

@@ -1,3 +1,5 @@
+# Python dictionary notes
+
 # data in dictionaries is in key-value pairs
 # keys can't be duplicated
 # keys must be any immutable datatype (numbers, bools, strings or tuples), but you can't use a list or a dict as the key
