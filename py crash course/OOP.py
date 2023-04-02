@@ -30,7 +30,7 @@ violet.color = "blue"
 
 pun = "Dwight killed Sprinkles, and buried him too."
 
-print(f"Roses are {rose.color},\nViolets are {violet.color}.\n{pun}\n")
+# print(f"Roses are {rose.color},\nViolets are {violet.color}.\n{pun}\n")
 
 
 # -------------------------------------------------------------------------------------------
@@ -59,10 +59,10 @@ def exchange_ideas(you, me):
     me.ideas = you.ideas
     return you.ideas, me.ideas
 
-exchange_apples(johanna, martin)
-print("Johanna has {} apples and Martin has {} apples".format(johanna.apples, martin.apples))
-exchange_ideas(johanna, martin)
-print("Johanna has {} ideas and Martin has {} ideas".format(johanna.ideas, martin.ideas))
+# exchange_apples(johanna, martin)
+# print("Johanna has {} apples and Martin has {} apples".format(johanna.apples, martin.apples))
+# exchange_ideas(johanna, martin)
+# print("Johanna has {} ideas and Martin has {} ideas".format(johanna.ideas, martin.ideas))
 
 
 
@@ -124,9 +124,9 @@ def max_elevation_city(min_population):
 	else:
 		return ""
 
-print(max_elevation_city(100000)) # Should print "Cusco, Peru"
-print(max_elevation_city(1000000)) # Should print "Sofia, Bulgaria"
-print(max_elevation_city(10000000)) # Should print ""
+# print(max_elevation_city(100000)) # Should print "Cusco, Peru"
+# print(max_elevation_city(1000000)) # Should print "Sofia, Bulgaria"
+# print(max_elevation_city(10000000)) # Should print ""
 
 
 # -------------------------------------------------------------------------------------
@@ -146,7 +146,19 @@ couch.material = "leather"
 def describe_furniture(piece):
 	return f"This piece of furniture is made of {piece.color} {piece.material}"
 
-print(describe_furniture(table)) 
+# print(describe_furniture(table)) 
 # Should be "This piece of furniture is made of brown wood"
-print(describe_furniture(couch)) 
+# print(describe_furniture(couch)) 
 # Should be "This piece of furniture is made of red leather"
+
+# -----------------------------------------------------------------------------
+
+class Piglet:
+	name = "piglet"		# default value for 'name' attribute
+	def speak(self):
+		print(f"oink oink I'm {self.name}")
+
+
+hamlet = Piglet()
+hamlet.name = "Piggy"	# new value for 'name' attribute on the 'hamlet' instance of 'Piglet'
+hamlet.speak()		# calls .speak() method, using the new 'name' value
