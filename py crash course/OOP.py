@@ -7,11 +7,11 @@
 class Orange:    # defines a new class named 'Orange'
     pass
 
-class Apple:
+class Apples:
     color = ""
     flavor = ""
 
-granny_smith = Apple()
+granny_smith = Apples()
 granny_smith.color = "green"
 granny_smith.flavor = "tart"
 
@@ -153,12 +153,66 @@ def describe_furniture(piece):
 
 # -----------------------------------------------------------------------------
 
+
+
+# INSTANCE METHODS
+
+
 class Piglet:
-	name = "piglet"		# default value for 'name' attribute
+	name = "piglet"		# default value for 'name' instance variable
+
+	years = 0
+
+	def pig_years(self):	# 'self' represents the instance the method is being executed on
+		print(self.years * 18)
+
 	def speak(self):
 		print(f"oink oink I'm {self.name}")
 
 
 hamlet = Piglet()
 hamlet.name = "Piggy"	# new value for 'name' attribute on the 'hamlet' instance of 'Piglet'
-hamlet.speak()		# calls .speak() method, using the new 'name' value
+# hamlet.speak()		# calls .speak() method, using the new 'name' value
+
+petunia = Piglet()
+petunia.name = "Petunia"	# 'petunia' instance of Piglet has "Petunia" as the value of 'name'
+# petunia.speak()
+
+piggy = Piglet()
+piggy.years = 2
+# piggy.pig_years()	# prints "36"
+
+# -----------------------------------------------------------------------------
+
+# CONSTRUCTORS AND OTHER SPECIAL METHODS
+
+# any method with two underscores is a special method, like '__init__'
+
+class Apple:
+	"""Represents an apple and its description"""
+	def __init__(self, name, color, flavor):		# constructor
+		self.name = name
+		self.color = color		
+		self.flavor = flavor	# sets the values as the values of the current instance
+
+# __str__ is a special method that tells Python what to say if print() is called on the instance of the class, rather than the default value which is the object's position in computer's memory
+	
+	def __str__(self):	
+		"""Outputs description of the apple when print() is used on the instance of the object"""
+		return f"A {self.name} apple is {self.color} and {self.flavor}."
+
+red_delicious = Apple("red delicious","red", "sweet")
+
+print(red_delicious) 
+# this will print whatever is in __str__ method. Normally this would print the object's position in memory
+
+# ------------------------------------------------------------------------------------
+
+# DOCSTRINGS
+
+# docstring controls what will be shown if 'help()' is used
+def to_seconds(hours, minutes, seconds):
+	"""Returns the amount of seconds in the given hours, minutes and seconds."""
+	return hours*3600+minutes*60+seconds
+
+help(to_seconds)
