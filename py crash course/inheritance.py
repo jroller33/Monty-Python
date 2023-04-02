@@ -1,3 +1,6 @@
+# ALWAYS INITIALIZE MUTABLE ATTRIBUTES IN THE CONSTRUCTOR
+
+
 class Fruit:
     def __init__(self, name, color, flavor):
         self.name = name

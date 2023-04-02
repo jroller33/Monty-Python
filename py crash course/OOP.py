@@ -186,6 +186,9 @@ piggy.years = 2
 
 # CONSTRUCTORS AND OTHER SPECIAL METHODS
 
+# ALWAYS INITIALIZE MUTABLE ATTRIBUTES IN THE CONSTRUCTOR
+
+
 # any method with two underscores is a special method, like '__init__'
 
 class Apple:
