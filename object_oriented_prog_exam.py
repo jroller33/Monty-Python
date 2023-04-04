@@ -1,4 +1,3 @@
-#Begin Portion 1#
 import random
 
 class Server:
