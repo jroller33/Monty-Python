@@ -29,17 +29,18 @@ class Server:
 server = Server()
 server.add_connection("192.168.1.1")
 
-print(server.load())    # load is calculated randomly, should be different each time it's executed. Output should be a number between 1 and 10
+# print(server.load())    # load is calculated randomly, should be different each time it's executed. Output should be a number between 1 and 10
 
-server.close_connection("192.168.1.1")
-print(server.load())    # output should be 0
-
-
+# server.close_connection("192.168.1.1")
+# print(server.load())    # output should be 0
 
 
 
 
 
+
+
+#Begin Portion 2#
 #Begin Portion 2#
 class LoadBalancing:
     def __init__(self):
@@ -64,11 +65,14 @@ class LoadBalancing:
 
     def avg_load(self):
         """Calculates the average load of all servers"""
+        # sum = 0
+        print(l.connections)
+        # for Server.load in self.servers:
+        #     print(Server.load)
+            # sum += Server.load
+        # return sum
+        
         # Sum the load of each server and divide by the amount of servers
-        sum = 0
-        for load in self.connections.values():
-            sum += load
-        return sum
 
     def ensure_availability(self):
         """If the average load is higher than 50, spin up a new server"""
@@ -78,4 +82,15 @@ class LoadBalancing:
         """Returns a string with the load for each server."""
         loads = [str(server) for server in self.servers]
         return "[{}]".format(",".join(loads))
-#End Portion 2#
+
+
+
+
+
+
+l = LoadBalancing()
+
+l.add_connection("fdca:83d2::f20d")
+l.add_connection("fdca:84d2::f10d")
+
+print(l.avg_load())
