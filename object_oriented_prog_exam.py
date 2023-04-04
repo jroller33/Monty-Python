@@ -31,6 +31,8 @@ server.add_connection("192.168.1.1")
 
 print(server.load())    # load is calculated randomly, should be different each time it's executed. Output should be a number between 1 and 10
 
+server.close_connection("192.168.1.1")
+print(server.load())    # output should be 0
 
 
 
