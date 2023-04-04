@@ -26,6 +26,16 @@ class Server:
         return "{:.2f}%".format(self.load())
     
 
+server = Server()
+server.add_connection("192.168.1.1")
+
+print(server.load())    # load is calculated randomly, should be different each time it's executed. Output should be a number between 1 and 10
+
+
+
+
+
+
 
 
 #Begin Portion 2#
