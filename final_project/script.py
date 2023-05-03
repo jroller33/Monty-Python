@@ -1,6 +1,9 @@
+import logging
 import event    # event.py module
-
 from event import events
+
+logging.basicConfig(filename='final_project/current_users.log', encoding='utf-8', level=logging.INFO, force=True)   # 'force=True' is required. also make sure to include relative file path
+
 
 def get_event_date(event):
     return event.date
@@ -23,14 +26,21 @@ def current_users(events):
     return machines
 
 
-def generate_report(machines):
+def generate_log(machines):
     for machine, users in machines.items():
         if len(users) > 0:
             user_list = ", ".join(users)
-            print(f"{machine}: {user_list}")
+            logging.info(f"{machine}: {user_list}")
 
 users = current_users(events)
-generate_report(users)
+generate_log(users)
+
+
+
+# logging.debug('So should this')
+# logging.warning('And this, too')
+# logging.error('And non-ASCII stuff, too, like Øresund and Malmö')
+
 
 
 
