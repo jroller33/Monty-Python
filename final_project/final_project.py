@@ -30,7 +30,7 @@ def generate_report(machines):
             print(f"{machine}: {user_list}")
 
 users = current_users(events)
-print(users)
+generate_report(users)
 
 
 
