@@ -1,5 +1,7 @@
 import event    # event.py module
 
+from event import events
+
 def get_event_date(event):
     return event.date
 
@@ -15,7 +17,7 @@ def current_users(events):
         if event.type == "login":
             machines[event.machine].add(event.user)
 
-        elif event.type == "logout":
+        elif event.type == "logout" and event.user in machines:
             machines[event.machine].remove(event.user)
 
     return machines
@@ -26,6 +28,10 @@ def generate_report(machines):
         if len(users) > 0:
             user_list = ", ".join(users)
             print(f"{machine}: {user_list}")
+
+users = current_users(events)
+print(users)
+
 
 
 # numbers1 = [4, 5, 2, 9, 6, 3, 7]
